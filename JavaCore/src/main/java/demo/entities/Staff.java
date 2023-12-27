@@ -57,6 +57,7 @@ public class Staff implements Comparable<Staff> {
 		return Objects.hash(fullname, age, address);
 	}
 
+	@Override
 	public int compareTo(Staff otherStaff) {
 		return this.fullname.compareTo(otherStaff.fullname);
 	}

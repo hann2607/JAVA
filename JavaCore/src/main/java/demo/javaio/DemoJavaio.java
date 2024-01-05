@@ -110,9 +110,7 @@ public class DemoJavaio {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			if(fin != null) {
-				fin.close();
-			}
+			fin.close();
 		}
 	}
 	
@@ -138,7 +136,7 @@ public class DemoJavaio {
 		}
 	}
 	
-	private static void demoBufferedInputStream(String absolutePath) {
+	private static void demoBufferedInputStream(String absolutePath) throws IOException {
 		FileInputStream fin = null;
 		BufferedInputStream bufferedInputStream = null;
 		long start = 0;       // check time for read FileInputStream
@@ -164,6 +162,8 @@ public class DemoJavaio {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
+		} finally {
+			fin.close();
 		}
 	}
 	

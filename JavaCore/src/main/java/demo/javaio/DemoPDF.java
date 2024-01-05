@@ -24,7 +24,7 @@ public class DemoPDF {
 		ArrayList<Staff> listStaffs = new ArrayList<Staff>();
 
 		// Add data to ArrayList
-		listStaffs.add(new Staff("Nguyen Van A", 20, "HCM"));
+		listStaffs.add(new Staff("Nguyen Van X", 20, "HCM"));
 		listStaffs.add(new Staff("Nguyen Van B", 18, "HN"));
 		listStaffs.add(new Staff("Nguyen Van D", 23, "HCM"));
 		listStaffs.add(new Staff("Nguyen Van E", 22, "GL"));

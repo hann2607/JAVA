@@ -8,7 +8,9 @@ import demo.entities.Staff;
 public class DemoOptional {
 	public static void main(String[] args) {
 		// Demo Optional
-		runDemoOptional();
+//		runDemoOptional();
+		Staff staff = new Staff("Nguyen Van A", 20, "HCM");
+		testMethod(staff);
 	}
 
 	private static void runDemoOptional() {
@@ -61,5 +63,11 @@ public class DemoOptional {
 		// Demo orElseThrow()
 		System.out.print("Demo orElseThrow(): ");
 		optionalEmpty.orElseThrow(() -> new IllegalStateException("Demo orElseThrow!"));
+	}
+	
+	private static void testMethod(Staff staff) {
+		Optional<Staff> checkStaff = Optional.ofNullable(staff);
+		checkStaff.filter(st -> st.getAge() > 18).map(s -> (String) s.getFullname() + " Lớn hơn 18!")
+								.ifPresent(System.out::println);
 	}
 }

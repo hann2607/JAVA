@@ -41,6 +41,10 @@ public class Staff implements Comparable<Staff> {
 	public void setAddress(String address) {
 		this.address = address;
 	}
+	
+	public String getDisplayed() {
+		return this.fullname + " " + this.age + " " + this.address;
+	}
 
 	@Override
 	public boolean equals(Object obj) {

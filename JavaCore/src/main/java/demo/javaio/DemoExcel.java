@@ -43,7 +43,7 @@ public class DemoExcel {
 		try {
 			fin = new FileInputStream(absolutePath + "\\file\\demoExcel.xlsx");
 			workbook = new XSSFWorkbook(fin);
-			sheet = workbook.getSheetAt(0);        // Get sheet at index
+			sheet = workbook.getSheetAt(1);        // Get sheet at index
 
 			// Add to ArrayList
 			for (Row row : sheet) {

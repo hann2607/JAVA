@@ -108,7 +108,7 @@ public class DemoJavautilMain {
 		System.out.println("\nSize of ArrayList: " + listStaffs.size());
 
 		// Demo set(int index, E e)
-		listStaffs.get(1).setFullname("Tran Van C");;
+		listStaffs.set(1, new Staff("Tran Van C", 18, "HCM"));
 		System.out.println("\nDemo set(int index, E e) of ArrayList:");
 		for (int i = 0; i < listStaffs.size(); i++) {
 			System.out.println(listStaffs.get(i).getFullname() + " - " 
@@ -708,7 +708,7 @@ public class DemoJavautilMain {
 		    System.out.println("username: " + properties.getProperty("password"));
 
 		    // Write param to XML
-		    properties.put("username", "admin1234");
+		    properties.put("username", "admin12345");
 		    
 		    // Store into a XML
 		    properties.storeToXML(fos, "Comment here");

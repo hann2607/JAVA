@@ -97,33 +97,29 @@ public class DemoString {
 		
 		Runnable task1 = () -> {
 			for (int i = 0; i < 500; i++) {
-				synchronized (stringBuffer) {
 		            stringBuffer.append(" thread1");
-		        }
 			}
         };
 
         Runnable task2 = () -> {
         	for (int i = 0; i < 500; i++) {
-        		synchronized (stringBuffer) {
         			stringBuffer.append(" thread2");
-                }
 			}
         };
         
         Runnable task3 = () -> {
 			for (int i = 0; i < 500; i++) {
-				synchronized (stringBuffer) {
+
 					stringBuilder.append(" thread3");
-		        }
+		        
 			}
         };
 
         Runnable task4 = () -> {
         	for (int i = 0; i < 500; i++) {
-        		synchronized (stringBuffer) {
+        		
         			stringBuilder.append(" thread4");
-                }
+                
 			}
         };
 

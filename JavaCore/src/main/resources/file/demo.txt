@@ -1,1 +1,1 @@
-hello Viet Nam!
+test write file use FileOutputStream

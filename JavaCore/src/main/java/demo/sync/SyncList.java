@@ -14,10 +14,10 @@ public class SyncList {
         Runnable task1 = () -> {
             for (int i = 0; i < 1000; i++) {
             	// Demo arrayList in Multi-thread
-//            	 arrayList.add(i);
+            	 arrayList.add(i);
             	
             	// Demo vector in Multi-thread
-            	vector.add(i);
+//            	vector.add(i);
             	
             	// Demo arrayList in Multi-thread use synchronizedList
             	synchronizedList.add(i);
@@ -27,10 +27,10 @@ public class SyncList {
         Runnable task2 = () -> {
             for (int i = 0; i < 1000; i++) {
             	// Demo arrayList in Multi-thread
-//            	arrayList.add(i);
+            	arrayList.add(i);
             	
             	// Demo vector in Multi-thread
-            	vector.add(i);
+//            	vector.add(i);
             	
             	// Demo arrayList in Multi-thread use synchronizedList
             	synchronizedList.add(i);
@@ -50,8 +50,8 @@ public class SyncList {
             e.printStackTrace();
         }
 
-//        System.out.println("Size of arrayList: " + arrayList.size());
-        System.out.println("Size of vector: " + synchronizedList.size());
+        System.out.println("Size of arrayList: " + arrayList.size());
+//        System.out.println("Size of vector: " + synchronizedList.size());
         System.out.println("Size of arrayList use synchronizedList: " + synchronizedList.size());
     }
 }

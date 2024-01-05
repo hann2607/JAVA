@@ -40,11 +40,17 @@ public class DemoStreams {
 		staffs.stream().forEach(staff -> System.out.println(staff.getFullname() + " " 
 		+ staff.getAge() + " " + staff.getAddress()));
 		
-		// Demo map() vd: numbers = Arrays.asList(1, 2, 3, 4, 5); numbers.stream().map(n -> n * n);
-		System.out.println("\nDemo map(): ");
+		// Demo map() use lambda vd: numbers = Arrays.asList(1, 2, 3, 4, 5); numbers.stream().map(n -> n * n);
+		System.out.println("\nDemo map() use lambda: ");
 		staffs.stream().map(staff -> staff.getFullname().toLowerCase() + " " 
-				+ staff.getAge() + " " + staff.getAddress())
-						.forEach(System.out::println);
+							+ staff.getAge() + " " + staff.getAddress())
+	    			.forEach(staff -> System.out.println(staff));
+		
+		// Demo map() use method refferences
+		System.out.println("\nDemo map() use method refferences: ");
+		staffs.stream().map(Staff::getDisplayed)
+	    			.map(String::toLowerCase)
+	    			.forEach(System.out::println);
 		
 		// Demo Map() and flatMap()
 		System.out.println("\nDemo map() and flatMap(): \nmap(): ");
